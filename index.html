@@ -378,7 +378,7 @@ function render(){
   document.getElementById("tbody").innerHTML=rows.map(a=>{
     const ld=LD[A.indexOf(a)];
     return`<tr data-id="${a.id}">
-      <td style="padding:0 0 0 10px;"><img class="alo" src="https://logo.clearbit.com/${a.logo}" alt="" onerror="this.style.opacity='.1'"></td>
+      <td style="padding:0 0 0 10px;"><img class="alo" src="https://www.google.com/s2/favicons?sz=64&domain=${a.logo}" alt="" onerror="this.style.opacity='.1'"></td>
       <td>
         <div class="acw">
           <div class="acw-l"><div><div class="an">${a.name}</div><div class="asub">${a.hq}</div></div></div>
@@ -425,7 +425,7 @@ function fReg(v,el){const was=el.classList.contains('on');document.querySelector
 function openPanel(id,e){
   e&&e.stopPropagation();
   const a=A.find(x=>x.id===id);if(!a)return;curA=a;
-  document.getElementById("pLogo").src=`https://logo.clearbit.com/${a.logo}`;
+  document.getElementById("pLogo").src=`https://www.google.com/s2/favicons?sz=64&domain=${a.logo}`;
   document.getElementById("pName").textContent=a.name;
   document.getElementById("pSub").textContent=`${a.hq} · ${a.ind}`;
   document.getElementById("pDesc").textContent=a.desc;
